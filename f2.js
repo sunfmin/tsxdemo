@@ -1,5 +1,5 @@
 function b() {
-  return 42
+  return 42;
 }
 
-module.exports = b
+module.exports = b;
