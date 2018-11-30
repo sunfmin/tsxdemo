@@ -2,7 +2,12 @@ import * as React from "preact";
 
 import b from "./f2";
 
+import m1 from "./m1";
+
+import Header from "./header";
+
 console.log(b());
+console.log(m1(43));
 
 function foo(a: number, b: string): string {
   return a + b;
@@ -17,12 +22,12 @@ function f() {
 
 console.log(foo(1, "abc"));
 
-function Header(props) {
-  return <h1 name={props.name}>{props.children}</h1>;
-}
-
 function Page(props) {
-  return <Header name="felix">Hi {b()}</Header>;
+  return (
+    <Header name="felix">
+      Hi {b()}, {m1(44)}
+    </Header>
+  );
 }
 
 React.render(<Page />, document.getElementById("root"));
